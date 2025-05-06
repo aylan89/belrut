@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Productos - Belrut Import</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e3f2fd;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1565c0;
+      font-size: 2.5rem;
+      margin: 20px 10px;
+      font-weight: 700;
+    }
+
+    .search-container {
+      text-align: center;
+      margin: 20px 10px;
+    }
+
+    .search-container input[type="text"] {
+      width: 90%;
+      max-width: 400px;
+      padding: 12px;
+      border: 2px solid #1565c0;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .category {
+      margin: 20px auto;
+      max-width: 1200px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .category h2 {
+      background-color: #bbdefb;
+      padding: 15px;
+      border-left: 5px solid #1976d2;
+      color: #0d47a1;
+      margin: -20px -20px 20px -20px;
+      border-radius: 12px 12px 0 0;
+      font-size: 1.8rem;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .product-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .product-item h3 {
+      color: #1976d2;
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+
+    .product-item p {
+      margin: 5px 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #28a745;
+      font-size: 1.1rem;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .product-item:hover .submenu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .category h2 {
+        font-size: 1.5rem;
+      }
+
+      .submenu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        display: block;
+        margin-top: 10px;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Productos</h1>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Buscar producto...">
+  </div>
+
+  <!-- IRF Series -->
+  <div class="category">
+    <h2>IRF Series</h2>
+    <div class="product-list" id="irfSeries">
+      <div class="product-item">
+        <img src="3205.jpg" alt="IRF3205">
+        <h3>IRF3205 ORIGINAL</h3>
+        <p>50 por regleta</p>
+        <p class="price">$19.00</p>
+        <div class="submenu">
+          <p>Voltaje: 55V</p>
+          <p>Amperaje: 110A</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="064.jpg" alt="IRF064">
+        <h3>IRF064 ORIGINAL</h3>
+        <p>25 por regleta</p>
+        <p class="price">$45.00</p>
+        <div class="submenu">
+          <p>Voltaje: 60V</p>
+          <p>Amperaje: 70A</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="" alt="IRF150N">
+        <h3>IRF150N ORIGINAL</h3>
+        <p>25 por regleta</p>
+        <p class="price">$30.00</p>
+        <div class="submenu">
+          <p>Voltaje: 60V/100V</p>
+          <p>Amperaje: 40A</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="" alt="IRF150M">
+        <h3>IRF150M ORIGINAL</h3>
+        <p>25 por regleta</p>
+        <p class="price">$30.00</p>
+        <div class="submenu">
+          <p>Voltaje: 60V/100V</p>
+          <p>Amperaje: 40A</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="" alt="IRF250">
+        <h3>IRF250 ORIGINAL</h3>
+        <p>25 por regleta</p>
+        <p class="price">$50.00</p>
+        <div class="submenu">
+          <p>Voltaje: 200V</p>
+          <p>Amperaje: 33A</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BTA Series -->
+  <div class="category">
+    <h2>BTA Series</h2>
+    <div class="product-list" id="btaSeries">
+      <div class="product-item">
+        <img src="ruta/a/la/imagen/bta24.jpg" alt="BTA24-600CW">
+        <h3>BTA24-600CW</h3>
+        <p>50 por regleta</p>
+        <p class="price">$20.00</p>
+        <div class="submenu">
+          <p>Voltaje: 600V</p>
+          <p>Amperaje: 24A</p>
+        </div>
+      </div>
+
+      <div class="product-item">
+        <img src="ruta/a/la/imagen/bta40.jpg" alt="BTA40-600B">
+        <h3>BTA40-600B</h3>
+        <p>Individual</p>
+        <p class="price">$125.00</p>
+        <div class="submenu">
+          <p>Voltaje: 600V</p>
+          <p>Amperaje: 40A</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function searchProducts() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const products = document.querySelectorAll('.product-item');
+
+      products.forEach(product => {
+        const productName = product.querySelector('h3').textContent.toLowerCase();
+        product.style.display = productName.includes(input) ? 'block' : 'none';
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', searchProducts);
+  </script>
+</body>
+</html>
